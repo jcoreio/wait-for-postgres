@@ -18,10 +18,10 @@ export async function waitForPostgres(args: PostgresReadyArgs): Promise<void> {
       try {
         await Promise.race([
           emitted(client, 'error'),
-          promisify(cb => client.connect(cb))(),
+          client.connect(),
         ])
       } finally {
-        client.end()
+        await client.end()
       }
     },
     1000
