@@ -1,0 +1,11 @@
+// @flow
+
+import { type ClientConfig as PostgresClientConfig } from 'pg'
+
+export type PostgresReadyArgs = PostgresClientConfig & {
+  timeout?: ?number,
+}
+
+declare export function waitForPostgres(args: PostgresReadyArgs): Promise<void>;
+
+declare export function isPostgresReady(args: PostgresReadyArgs): Promise<boolean>;

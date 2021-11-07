@@ -14,8 +14,8 @@ or
 
 Wait for Postgres to be ready, throwing an `Error` after a timeout:
 
-```js
-const {waitForPostgres} = require('@jcoreio/wait-for-postgres')
+```ts
+import { waitForPostgres } from '@jcoreio/wait-for-postgres'
 
 // returns when Postgres becomes available, or throws an Error if Postgres does not become available 
 // before the timeout expires
@@ -31,8 +31,8 @@ await waitForPostgres({
 Check if Postgres is ready, returning `true` when ready or `false` if the timeout expires before the
 database is ready:
 
-```js
-const {isPostgresReady} = require('@jcoreio/wait-for-postgres')
+```ts
+import { isPostgresReady } from '@jcoreio/wait-for-postgres'
 
 // returns true when Postgres becomes available, or returns false if Postgres does not become available 
 // before the timeout expires
@@ -47,4 +47,4 @@ const isReady = await isPostgresReady({
 
 ## License
 
- [Apache-2.0](LICENSE)
+[Apache-2.0](LICENSE)
