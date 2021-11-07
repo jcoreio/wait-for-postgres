@@ -1,4 +1,4 @@
-import { pEvent, Emitter } from 'p-event'
+import pEvent, { Emitter } from 'p-event'
 import {
   Client as PostgresClient,
   ClientConfig as PostgresClientConfig,

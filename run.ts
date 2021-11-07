@@ -77,7 +77,10 @@ const buildJSTask = task('build:js', ['node_modules'], () =>
 
 const buildTypesTask = task('build:types', ['node_modules'], async () => {
   await spawn('tsc', ['--emitDeclarationOnly', '-p', 'src'])
-  await fs.copy(path.join('src', 'index.js.flow'), path.join('lib', 'index.js.flow'))
+  await fs.copy(
+    path.join('src', 'index.js.flow'),
+    path.join('lib', 'index.js.flow')
+  )
 })
 
 // Just transpile from src to lib
